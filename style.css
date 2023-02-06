@@ -1,0 +1,184 @@
+* {
+    font-family: "Arial nova light", Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: calc(100vh - 10px);
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid purple;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 0px;
+}
+
+nav a, nav span {
+    margin: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: larger;
+    color: grey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.current-page  {
+    color: purple;
+}
+
+main {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex: 2;
+}
+
+.page-title {
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+
+.main-img {
+    width: 400px;
+    margin-right: 20px;
+    /* clip-path: circle(); */
+    border-radius: 50%;
+    box-shadow: 0px 2px rgb(159, 157, 157);
+    overflow: hidden;
+}
+
+.main-img:hover {
+    transform: scaleX(-1);
+}
+
+main figure {
+    margin: 0;
+    border-right: 1px solid lightgrey;
+    text-align: center;
+}
+
+main figure p {
+    font-size: small;
+    color: purple;
+}
+
+.photo-text, .photo-link {
+    margin: 5px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+main section {
+    width: 600px;
+    margin: 20px;
+}
+
+.progress-table, .info-table {
+    min-width: 100%;
+}
+
+.info-table {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.info-table tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-table td:not(b, .time) {
+    font-size: 85%;
+}
+
+main section table h4 {
+    margin: 10px;
+}
+
+.page-bottom-note {
+    padding-top: 100px;
+    color: grey;
+}
+
+.colored-link {
+    text-decoration: none;
+}
+
+.page-bottom-note a:not(.colored-link) {
+    color: grey;
+}
+
+.progress {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: lightgrey;
+    border-radius: 1.5em;
+    border: 1px solid rgb(190, 190, 190);
+    color: white;
+}
+
+.progress::before {
+    content: "";
+    display: flex; 
+    align-items: center;
+    width: calc(var(--width) * 1%);
+    height: 100%;
+    background-color: rgb(112, 112, 255);
+    border-radius: 1.5em;
+}
+
+td b {
+    font-size: large;
+}
+
+ul {
+    padding-left: 12px;
+    list-style-type: "- ";
+}
+
+li {
+    padding-bottom: 15px;
+}
+
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    border-top: 1px solid lightgrey;
+    padding: 20px;
+    font-size: small;
+}
+
+@media only screen and (max-width: 960px) {
+    main {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    main figure {
+        border-bottom: 1px solid lightgrey;
+        border-right: 0px hidden;
+    }
+
+    main section {
+        min-width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .page-title {
+        text-align: center;
+    }
+}
